@@ -1,0 +1,24 @@
+<?php
+
+add_action('wp_encqueue_scripts', 'timber_style' );
+add_action( 'wp_enqueue_scripts', 'timber_scripts' );
+
+function timber_style(){
+
+    wp_encqueue_style( 'normalize-style', get_template_directory_uri(), 'assets/css/normalize.css' );
+    wp_encqueue_style( 'magnific-style', get_template_directory_uri(), 'assets/css/magnific-popup.css' );
+    wp_encqueue_style( 'main-style', get_stylesheet_uri() );
+
+}
+
+function theme_scripts() {
+
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js' );
+    wp_enqueue_script( 'jquery' );
+
+    wp_enqueue_script( 'magnific-script', get_stylesheet_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(jquery), null, true );
+
+    wp_enqueue_script( 'main-script', get_stylesheet_directory_uri() . '/assets/js/main.js', array(jquery), null, true );
+
+}

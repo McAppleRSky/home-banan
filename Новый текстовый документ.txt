@@ -1,0 +1,17 @@
+visualStudioCode
+Material Theme
+ - Ocean
+header без footer
+
+header.header
+лого
+название
+тел
+.header_inner(t.e. div)
+
+
+
+wp theme:
+Advansed custom Fields (!)
+Advansed custom Fields: Fonts Awesome Fields
+Advansed custom Fields: Extended
